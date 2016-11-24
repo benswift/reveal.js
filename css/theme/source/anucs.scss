@@ -35,5 +35,6 @@ $mainFontSize: 36px;
 // ---------------------------------------------
 
 .reveal code {
-    font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace;
+  background: lighten( $backgroundColor, 5% );
 }
