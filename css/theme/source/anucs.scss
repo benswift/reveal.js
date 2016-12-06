@@ -16,18 +16,21 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:500);
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #262626;
+$anuCecsGrey: #262626;
+$anuCecsRed: #960022;
+
+$backgroundColor: $anuCecsGrey;
 
 $mainFont: 'Alegreya Sans', sans-serif;
-$linkColor: #960022;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColor: lighten( $anuCecsRed , 20% );
+$linkColorHover: lighten( $linkColor, 10% );
 $headingFont: 'Alegreya Sans', Impact, sans-serif;
-$headingFontWeight: 800;
+$headingFontWeight: 700;
 $headingTextShadow: none;
 // $headingLetterSpacing: -0.03em;
 $headingTextTransform: none;
-$selectionBackgroundColor: lighten( $linkColor, 30% );
-$mainFontSize: 36px;
+$selectionBackgroundColor: lighten( $linkColor, 10% );
+$mainFontSize: 32px;
 
 
 // Theme template ------------------------------
