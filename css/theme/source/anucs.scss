@@ -1,46 +1,66 @@
 /**
- * Black theme for reveal.js.
+ * ANU CECS theme for reveal.hs by Ben Swift
  *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Based on heavily modified version of the "Black" theme by Hakim El Hattab, http://hakim.se
  */
 
-
-// Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
-// ---------------------------------------------
-
-
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800,400italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,700,300italic,500italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:500);
 
 // Override theme settings (see ../template/settings.scss)
-$anuCecsGrey: #262626;
+$anuWhite: #FFF;
+$anuGrey: #262626;
+$anuGreen: #4C6E78;
 $anuCecsRed: #960022;
 
-$backgroundColor: $anuCecsGrey;
-
-$mainFont: 'Alegreya Sans', sans-serif;
-$linkColor: lighten( $anuCecsRed , 20% );
+$linkColor: lighten( $anuGreen, 20% );
 $linkColorHover: lighten( $linkColor, 10% );
-$headingFont: 'Alegreya Sans', Impact, sans-serif;
-$headingFontWeight: 700;
-$headingTextShadow: none;
-// $headingLetterSpacing: -0.03em;
-$headingTextTransform: none;
 $selectionBackgroundColor: lighten( $linkColor, 10% );
-$mainFontSize: 32px;
+$leftPadding: 1em;
 
+// theme
+.reveal {
+    // globals
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    background-color: $anuWhite;
+    color: $anuGrey;
+    line-height: 1.5;
 
-// Theme template ------------------------------
-@import "../template/theme";
-// ---------------------------------------------
+    // titlecard level
+    .level1 h1 {
+        margin: "auto";
+        font-size: 3em;
+        font-weight: 500;
+    }
 
-.reveal code {
-  font-family: 'Source Code Pro', monospace;
-}
+    // slide level
+    .level2 h2 {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        font-size: 2.5em;
+        font-weight: 500;
+        text-align: left;
+        padding: 10px 0px 6px $leftPadding;
+        color: $anuWhite;
+        background-color: $anuGrey;
+    }
 
-.reveal pre {
-  border: medium solid lighten( $backgroundColor, 25% );
+    // source code
+    code {
+        font-family: 'Source Code Pro', monospace;
+        padding: 0.2em;
+        margin: 0;
+        font-size: 1.2em;
+        background-color: #ddd;
+        border-radius: 0px;
+        box-sizing: border-box;
+    }
+
+    pre {
+        text-align: left;
+    }
 }
