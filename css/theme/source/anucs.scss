@@ -17,7 +17,7 @@ $anuCecsRed: #960022;
 $linkColor: lighten( $anuGreen, 20% );
 $linkColorHover: lighten( $linkColor, 10% );
 $selectionBackgroundColor: lighten( $linkColor, 10% );
-$leftPadding: 1em;
+$sidePadding: 5%;
 
 // theme
 .reveal {
@@ -28,11 +28,18 @@ $leftPadding: 1em;
     color: $anuGrey;
     line-height: 1.5;
 
+    .slides {
+        text-align: left;
+        padding: 0 $sidePadding 0 $sidePadding;
+    }
+
     // titlecard level
     .level1 h1 {
         margin: "auto";
+        width: 90%;
         font-size: 3em;
         font-weight: 500;
+        text-align: center;
     }
 
     // slide level
@@ -44,7 +51,7 @@ $leftPadding: 1em;
         font-size: 2.5em;
         font-weight: 500;
         text-align: left;
-        padding: 10px 0px 6px $leftPadding;
+        padding: 0 $sidePadding 0 $sidePadding;
         color: $anuWhite;
         background-color: $anuGrey;
     }
