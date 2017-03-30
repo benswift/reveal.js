@@ -11,4 +11,5 @@ node_modules/
 .sass-cache
 css/reveal.min.css
 css/theme/*.map
+css/theme/anucs.css
 js/reveal.min.js
