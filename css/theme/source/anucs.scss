@@ -28,32 +28,32 @@ $sidePadding: 5%;
     color: $anuGrey;
     line-height: 1.5;
 
+    box-sizing: border-box;
+    border-top-color: $anuGrey;
+    border-top-style: solid;
+    border-top-width: 15vh;
+    border-bottom-color: $anuGreen;
+    border-bottom-style: solid;
+    border-bottom-width: 3vh;
+
     .slides {
         text-align: left;
-        padding: 0 $sidePadding 0 $sidePadding;
+        /* padding: 0 $sidePadding 0 $sidePadding; */
     }
 
     // titlecard level
     .level1 h1 {
-        margin: "auto";
-        width: 90%;
+        width: calc(100vw - #{$sidePadding} * 2);
         font-size: 3em;
         font-weight: 500;
-        text-align: center;
     }
 
     // slide level
     .level2 h2 {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
         font-size: 2.5em;
         font-weight: 500;
         text-align: left;
         padding: 0 $sidePadding 0 $sidePadding;
-        color: $anuWhite;
-        background-color: $anuGrey;
     }
 
     // source code
@@ -70,6 +70,5 @@ $sidePadding: 5%;
     pre code {
 	      box-sizing: border-box;
         text-align: left;
-        width: calc(100vw - #{$sidePadding} * 2);
     }
 }
