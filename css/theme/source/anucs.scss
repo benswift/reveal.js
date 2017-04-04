@@ -27,7 +27,7 @@ $sidePadding: 5vw;
     font-weight: 300;
     background-color: $anuWhite;
     color: $anuGrey;
-    line-height: 1.5;
+    line-height: 1.6;
 
     // anu top+bottom border colours
     box-sizing: border-box;
@@ -77,5 +77,6 @@ $sidePadding: 5vw;
 	      box-sizing: border-box;
         background: #282c34;
         text-align: left;
+        margin: 1em 0;
     }
 }
