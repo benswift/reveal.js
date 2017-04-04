@@ -5,8 +5,8 @@
  */
 
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,700,300italic,500italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:500);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 // Override theme settings (see ../template/settings.scss)
 $anuWhite: #FFF;
@@ -17,58 +17,65 @@ $anuCecsRed: #960022;
 $linkColor: lighten( $anuGreen, 20% );
 $linkColorHover: lighten( $linkColor, 10% );
 $selectionBackgroundColor: lighten( $linkColor, 10% );
-$sidePadding: 5%;
+$sidePadding: 5vw;
 
 // theme
 .reveal {
     // globals
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 40px;
+    font-weight: 300;
     background-color: $anuWhite;
     color: $anuGrey;
     line-height: 1.5;
 
+    // anu top+bottom border colours
     box-sizing: border-box;
     border-top-color: $anuGrey;
     border-top-style: solid;
     border-top-width: 15vh;
-    border-bottom-color: $anuGreen;
+    border-bottom-color: lighten($anuGreen, 20%);
     border-bottom-style: solid;
     border-bottom-width: 3vh;
 
     .slides {
         text-align: left;
-        /* padding: 0 $sidePadding 0 $sidePadding; */
+        padding: 0 $sidePadding 0 $sidePadding;
+
+        .stack {
+            width: calc(100vw - #{$sidePadding} * 2);
+        }
+
+        .slide{
+            padding-top: 10vh;
+        }
     }
 
     // titlecard level
     .level1 h1 {
-        width: calc(100vw - #{$sidePadding} * 2);
-        font-size: 3em;
-        font-weight: 500;
+        text-align: center;
+        font-size: 4em;
+        font-weight: 200;
+        margin-top: 25vh;
     }
 
     // slide level
     .level2 h2 {
         font-size: 2.5em;
-        font-weight: 500;
-        text-align: left;
-        padding: 0 $sidePadding 0 $sidePadding;
+        font-weight: 200;
     }
 
     // source code
     code {
         font-family: 'Source Code Pro', monospace;
-        padding: 0.2em;
-        margin: 0;
-        font-size: 1.2em;
+        padding: 0.1em;
         background-color: #ddd;
-        border-radius: 0px;
         box-sizing: border-box;
     }
 
-    pre code {
+    pre > code {
 	      box-sizing: border-box;
+        background: #fafafa;
         text-align: left;
     }
 }
