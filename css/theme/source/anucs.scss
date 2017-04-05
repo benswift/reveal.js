@@ -58,7 +58,7 @@ $borderBottom: 3vh;
         }
 
         .slide{
-            padding-top: calc(#{$borderTop} - 5vh);
+            padding-top: $borderTop;
         }
 
         // titlecard level
