@@ -25,15 +25,19 @@ $borderBottom: 3vh;
 
 // theme
 .reveal {
-    // globals
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 50px;
-    font-weight: 300;
+    // colours
     background-color: $anuWhite;
     color: $anuGrey;
-    line-height: 1.6;
 
-    // anu top+bottom border colours
+    // text
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.6;
+    strong {font-weight: 600;}
+    em {font-style: italic;}
+
+    // anu-style top+bottom border
     box-sizing: border-box;
     border-top-color: $anuGrey;
     border-top-style: solid;
@@ -53,36 +57,52 @@ $borderBottom: 3vh;
         .slide{
             padding-top: calc(#{$borderTop} - 5vh);
         }
-    }
 
-    // titlecard level
-    .level1 h1 {
-        text-align: center;
-        font-size: 2.5em;
-        font-weight: 200;
-        margin-top: calc(#{$borderTop} + 10vh);
-    }
+        // titlecard level
+        .level1 h1 {
+            text-align: center;
+            font-size: 150px;
+            font-weight: 200;
+        }
 
-    // slide level
-    .level2 h2 {
-        font-size: 2em;
-        font-weight: 300;
-    }
+        // slide level
+        .level2 h2 {
+            font-size: 100px;
+            font-weight: 300;
+            margin-bottom: 0.5em;
+        }
 
-    // source code
-    code {
-        font-family: 'Source Code Pro', monospace;
-        padding: 0.1em;
-        background-color: #ddd;
-        box-sizing: border-box;
-    }
+        // higlight text (e.g. for use with image background)
+        .text-hl {
+            h1,h2,h3 {
+                color: $anuGrey;
+                background-color: adjust-color($anuWhite, $alpha: -0.25);
+                // padding: 0 0.2em;
+                margin: 0;
+                display: inline-block;
+            }
+        }
 
-    pre > code {
-	      box-sizing: border-box;
-        background: #fafafa;
-        text-align: left;
-        margin: 1em 0;
-        line-height: 1.2;
-        font-size: 0.9em;
+        // don't underline links
+        a {
+            text-decoration: none;
+            font-weight: 400;
+        }
+        // source code
+        code {
+            font-family: 'Source Code Pro', monospace;
+            padding: 0.1em;
+            background-color: #ddd;
+            box-sizing: border-box;
+        }
+
+        pre > code {
+            box-sizing: border-box;
+            background: #fafafa;
+            text-align: left;
+            margin: 1em 0;
+            line-height: 1.2;
+            font-size: 0.9em;
+        }
     }
 }
