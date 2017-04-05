@@ -40,14 +40,21 @@ $borderBottom: 3vh;
     strong {font-weight: 600;}
     em {font-style: italic;}
 
-    // anu-style top+bottom border
+    // anu-style grey header
     box-sizing: border-box;
     border-top-color: $anuGrey;
     border-top-style: solid;
     border-top-width: $borderTop;
-    border-bottom-color: lighten($anuGreen, 20%);
-    border-bottom-style: solid;
-    border-bottom-width: $borderBottom;
+
+    // progress bar
+    .progress {
+        height: $borderBottom;
+        background-color: lighten($anuGreen, 20%);
+        span {
+            background-color: $anuGreen;
+        }
+    }
+
 
     .slides {
         text-align: left;
