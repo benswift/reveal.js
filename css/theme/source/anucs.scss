@@ -17,7 +17,10 @@ $anuCecsRed: #960022;
 $linkColor: lighten( $anuGreen, 20% );
 $linkColorHover: lighten( $linkColor, 10% );
 $selectionBackgroundColor: lighten( $linkColor, 10% );
-$sidePadding: 8vw;
+
+// if you change this, make sure you change the "width" variable in top-level
+// makefile (a bit of a hack, I know)
+$sidePadding: 5vw;
 
 // border control
 $borderTop: 10vh;
